@@ -5,55 +5,63 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Odin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script src="./main.js" defer></script>
 </head>
-<body>
-  <div class="theme-switcher">
-    <input type="checkbox" id="switcher" />
-    <label for="switcher">switch</label>
-</div>
-  <section class="navigation">
-    <div class="logo"></div>
-    <nav class="main_nav">
-      <ul>
-        <li>Home</li>
-        <li>Profile</li>
-        <li>Messages</li>
-        <li>History</li>
-        <li>Tasks</li>
-        <li>Communities/li>
-      </ul>
-    </nav>
-    <nav class="second_nav">
-      <ul>
-        <li>Settings</li>
-        <li>Suport</li>
-        <li>Privacy</li>
-      </ul>
-    </nav>
-  </section>
-  <section class="main">
-    <div class="top">
-      <div class="top__navigation">
-        <div class="top__navigation--search"></div>
-        <div class="top__navigation--user-info"></div>
+<body data-theme="light">
+  <div class="container">
+    <div class="theme-switcher">
+      <input type="checkbox" id="switcher" />
+      <label for="switcher">switch</label>
+  </div>
+    <section class="navigation">
+      <div class="logo">
+        <h1 class="logo__text">Dashboard</h1>
       </div>
-      <div class="bottom__navigation">
-        <div class="bottom__navigation--user">
-          <div class="user__icon"></div>
-          <div class="user__info">
-            <p class="user__info--welcome">Hi there,</p>
-            <p class="user__info--name">Morgan Oacley (@morgan)</p>
-          </div>
-          <div class="bottom__navigation--controls">
-            <a href="#" class="blue-button">New</a>
-            <a href="#" class="blue-button">Upload</a>
-            <a href="#" class="blue-button">Share</a>
+      <nav class="main__nav">
+        <ul>
+          <li>Home</li>
+          <li>Profile</li>
+          <li>Messages</li>
+          <li>History</li>
+          <li>Tasks</li>
+          <li>Communities</li>
+        </ul>
+      </nav>
+      <nav class="second__nav">
+        <ul>
+          <li>Settings</li>
+          <li>Suport</li>
+          <li>Privacy</li>
+        </ul>
+      </nav>
+    </section>
+    <section class="main">
+      <div class="top">
+        <div class="top__navigation">
+          <div class="top__navigation--search"></div>
+          <div class="top__navigation--user-info"></div>
+        </div>
+        <div class="bottom__navigation">
+          <div class="bottom__navigation--user">
+            <div class="user__icon"></div>
+            <div class="user__info">
+              <p class="user__info--welcome">Hi there,</p>
+              <p class="user__info--name">Morgan Oacley (@morgan)</p>
+            </div>
+            <div class="bottom__navigation--controls">
+              <a href="#" class="blue-button">New</a>
+              <a href="#" class="blue-button">Upload</a>
+              <a href="#" class="blue-button">Share</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-  </section>
+  
+    </section>
+  </div>
 </body>
 </html>
