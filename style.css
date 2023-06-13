@@ -25,6 +25,7 @@ body{
   font-family: 'Roboto', sans-serif;
   background: var(--color-1);
   color: var(--color-2);
+  transition: all .3s;
 }
  
 img{
@@ -38,16 +39,16 @@ img{
 /* Toggle switch */
 body[data-theme="light"] {
   --color-1: rgb(243, 243, 243);
-  --color-2: rgb(0, 0, 0);
-  --color-3: rgb(36, 138, 179);
-  --color-4: rgb(80, 82, 110);
+  --color-2: #334155;
+  --color-3: #15803d;
+  --color-4: #ca8a04;
 }
 
 body[data-theme="dark"] {
-  --color-1: #1e1f26;
+  --color-1: #334155;
   --color-2: rgb(243, 243, 243);
-  --color-3: rgb(218, 218, 218);
-  --color-4: rgb(186, 186, 202);
+  --color-3: #15803d;
+  --color-4: #78716c;
 }
 
 .theme-switcher {
@@ -101,31 +102,42 @@ body[data-theme="dark"] {
   grid-template-columns: 1fr 4fr;
  }
 
- .logo{
-  margin-bottom: 3rem;
-  
- }
-.logo__text{
-  display: inline-block;
-}
-
- .logo__text::before{
-   content: "";
-   display: inline-block;
-   width: 40px;
-  height: 40px;
-  margin-right: .5rem ;
-  background-color: white;
-  -webkit-mask-image: url(./assets/view-dashboard.svg);
-  -webkit-mask-size: cover;
- }
-
  .navigation{
   background: var(--color-3);
-  color: var(--color-1);
+  color: white;
   font-size: 2rem;
-  padding: 2rem;
+  
  }
+
+ .navigation__logo{
+  padding: 2rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+ }
+.navigation__logo__title{
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+}
+
+.navigation__icon{
+  display: inline-block;
+  fill: white;
+  width: 4rem;
+  height: 4rem;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+}
+
+.navigation__icon.small{
+  width: 3rem;
+  height: 3rem;
+  margin-right: 2rem;
+}
+
 
 .main__nav{
   margin-bottom: 5rem;
@@ -133,6 +145,15 @@ body[data-theme="dark"] {
 
 .main__nav li,
 .second__nav li{
+  font-weight: 700;
+  padding: 1rem 2rem;
   list-style-type: none;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
+  display: flex;
+  align-items: center;
+ }
+
+ .main__nav li:hover,
+ .second__nav li:hover{
+  background: var(--color-2);
  }
